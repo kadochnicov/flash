@@ -9,3 +9,5 @@ function getGrade (s1, s2, s3) {
   }
 
 getGrade(0,40,60)
+
+// i am writing new code
