@@ -9,15 +9,26 @@
 // // output +1 to every element
 // console.log ( a.map(el => ++el) )
 
-let arrOfWords = ['apple', 'orange', 'bananas','wotermellon', 'pear']
+let arrOfWords = ['apple', 2, 'orange', 10, 15, 'bananas', 121, 'wotermellon', 'pear']
 
-function filterLongWords (word) {
-    return word.length >= 5
+function filterStr (str) {
+    return typeof(str) === 'string'
 }
 
-function startFromA (el) {
-    // console.log(el)
-     return el.startsWith('a',2);
- }
+function filterNum (str) {
+    return typeof(str) === 'number'
+}
 
-console.log(arrOfWords.filter(startFromA))
+console.log(arrOfWords.filter(filterStr).map(el => el.toUpperCase()))
+console.log(arrOfWords.filter(filterNum))
+
+
+// function filterLongWords (word) {
+//     return word.length >= 5
+// }
+
+// function startFromA (el) {
+//     // console.log(el)
+//      return el.startsWith('a',2);
+
+// console.log(arrOfWords.filter(startFromA))
