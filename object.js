@@ -23,6 +23,6 @@ console.log(cat.home)
 cat.home = false
 
 console.log("name" in cat) 
-//
+//jkhjkh
 
 
