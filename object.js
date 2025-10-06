@@ -15,14 +15,3 @@ console.log(dog.age)
 
 let nam = 'ownerName'
 console.log(dog[nam])
-
-const cat = dog;
-
-console.log(cat.home)
-
-cat.home = false
-
-console.log("name" in cat) 
-//jkhjkh
-
-
