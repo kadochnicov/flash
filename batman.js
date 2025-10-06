@@ -21,5 +21,4 @@ let quotes = [
   "Holy haberdashery, Batman!",
   "Let's put a smile on that faaaceee!"
 ]
-
 let hero = "Rob1n" 
