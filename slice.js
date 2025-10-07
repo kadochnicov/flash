@@ -5,3 +5,4 @@ function replace(s) {
 
 
 console.log(replace('aawwaatteeyytUHsdkfhs'))
+console.log(replace('aawwaatteeyytфывфUHsdkfhs'))
