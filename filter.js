@@ -37,4 +37,5 @@ console.log(arrOfWords.filter(filterNum))
 let asd = -150
 let qw = Math.abs(asd).toString().split('').map(el=>+el).reduce((a,b)=>a+b, 0)
 console.log(qw) 
-//1112222223333
+//1112222223333888889999
+
