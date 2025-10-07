@@ -27,6 +27,7 @@ console.log(arrOfWords.filter(filterNum))
 //     return word.length >= 5
 // }
 
+
 // function startFromA (el) {
 //     // console.log(el)
 //      return el.startsWith('a',2);
