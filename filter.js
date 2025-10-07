@@ -32,3 +32,8 @@ console.log(arrOfWords.filter(filterNum))
 //      return el.startsWith('a',2);
 
 // console.log(arrOfWords.filter(startFromA))
+
+let asd = -150
+let qw = Math.abs(asd).toString().split('').map(el=>+el).reduce((a,b)=>a+b, 0)
+console.log(qw) 
+//111
