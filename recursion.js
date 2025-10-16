@@ -1,13 +1,10 @@
-// iteration method
+// рекурсия должна содержать базовое условие
+// и правило движения по рекурсии 
 
-function powA (x, n) {
-    let rez = x;
 
-    for (let i = 1; i < n ; i++) {
-        rez *= x;
-    }
-
-    console.log(rez)
-}
-
-powA(2,4)
+// факториал 5*4*3*2*1
+function factotial (n) {
+    if (n === 1) return 1
+    return n * factotial(n - 1)
+} 
+console.log(factotial(10))
