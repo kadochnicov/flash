@@ -37,3 +37,15 @@ counterFeMale();
 counterMale();
 counterMale();
 counterFeMale();
+
+function AddByX (num) {
+    return function add (num2) {
+        console.log(num + num2)
+    }
+}
+
+const addfive = AddByX(5);
+addfive(5); 
+
+const addTen = AddByX(10);
+addTen(100)
