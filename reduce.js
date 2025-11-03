@@ -26,6 +26,9 @@ const order = [
     },
 ]
 
+let order_new = {...order}
+
+
 
 const allprice = order.reduce( (acc, el) => {
     return acc + (el.price * el.quantity);
