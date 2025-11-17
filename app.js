@@ -1,8 +1,10 @@
-console.log('js works');
-
 let btn = document.querySelectorAll('.accordion');
+let input = document.querySelector('input');
+let btn_form = document.querySelector('.btn_form')
 
-console.log(btn)
+function objListen (evt) {
+    console.log(evt.target);
+}
 
 function tglAccardion () {
     console.log('check');
@@ -10,8 +12,13 @@ function tglAccardion () {
 }
 
 btn.forEach(el => {
-    el.addEventListener('click', tglAccardion)
+    el.addEventListener('click', tglAccardion);
 })
+
+////////////////
+
+input.addEventListener('keypress', objListen);
+btn_form.addEventListener('click', objListen);
 
 
 
