@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .todo_body {
+        width: 300px;
+        background-color: rgb(230, 207, 252);
+        color: rgb(46, 80, 80);
+        padding: 10px;
+        margin: 20px;
+        border-radius: 15px;
+        border: 5px black;
+        box-shadow: 0 10px 10px 0 rgb(168, 167, 167);
+    }
+    .linethrough {
+        text-decoration: line-through;
+        color: rgb(151, 151, 151);
+    }
+
+</style>
+</head>
+<body>
+    <div class="todo_body">
+        <input type="text" placeholder="input your todo" >
+        <button class="btn_add">add to list</button>
+        <ul id="todo_list"></ul>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
