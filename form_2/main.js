@@ -15,6 +15,20 @@ function handleClick () {
     }
 }
 
+document.addEventListener('DOMContentLoaded', getTasksFromMemmory)
+
+function getTasksFromMemmory () {
+    let exist_tasks = JSON.parse( localStorage.getItem('tasks') );
+
+console.log(exist_tasks)
+
+    if (exist_tasks) {
+        exist_tasks.forEach(el => {
+            addItem(el);
+        })
+    }
+}
+
 function addItem (txt) {
     let newitem = document.createElement("li");
     let btndelete = document.createElement('button');
@@ -29,6 +43,8 @@ function addItem (txt) {
 
     list.append(newitem);
     list.append(btndelete);
+
+    saveInMemory(txt);
 }
 
 function crosslineItem () {
@@ -44,6 +60,10 @@ function delLi () {
     }
 }
 
+function saveInMemory(item) {
+    let task = JSON.parse( localStorage.getItem('tasks') ) || [];
+    window.localStorage.setItem('tasks', JSON.stringify([...task, item]) );
+}
 
 
 
