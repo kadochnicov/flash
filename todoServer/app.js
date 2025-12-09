@@ -1,22 +1,43 @@
 //Global data
+let list = document.querySelector('#todo-list');
 let users = [];
 let todos= [];
 
 //Attach events>
 document.addEventListener('DOMContentLoaded', appInit)
 
+//basic logic
+function getName(userId){
+    let user = users.find(el=> el.id === userId);
+    return user.name;
+}
+
+function printTodos({id, userId, title, completed}) {
+    let li = document.createElement('li');
+    li.innerHTML = `<span>${title} by ${getName(userId)}</span>`;
+
+    let status = document.createElement('input');
+    status.type = 'checkbox';
+    status.checked = completed;
+
+    li.classList.add('todo-item');
+    li.dataset.id = id;
+
+    li.prepend(status);
+
+    list.prepend(li);
+}
+
 //event logic
 function appInit(){
     Promise.all([getUsers(), getTodos()])
         .then((inf)=>{
             [users, todos] = inf;
-             console.log(users);
-             console.log('xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx');
-             console.log(todos);
+            
+            todos.forEach(element =>printTodos(element));
         })
 
     //render
-
 }
 
 // Async functions
